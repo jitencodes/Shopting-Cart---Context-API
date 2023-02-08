@@ -18,15 +18,15 @@ useEffect(() => {
   return <div className=' px-[50px]'> 
     <h1 className='py-[40px] text-[18px] font-semibold capitalize  text-gray-500 tracking-wider'>
       <Link to='/' className='cursor-pointer text-pink-900'>Home</Link>{` / ${category} / ${title}`}</h1>
-    <div className="flex flex-col gap-3 md:flex-row">
+    <div className="flex flex-col justify-between gap-[50px] md:flex-row">
       <div className="flex justify-center flex-1">
         <img src={image} alt={title} className='w-[100px] md:w-[300px]' />
       </div>
       <div className="flex flex-col flex-1 gap-[30px] md:gap-[50px] justify-center ">
-        <div>
-        <h1  className='font-bold text-[22px]'>{title}</h1>
-        <h1 className='font-normal text-[20px]'>$ {price}</h1>
-        <p className='font-normal leading-[35px] tracking-wide text-gray-500 text-[22px]'>{description}</p>
+        <div className='flex flex-col gap-3'>
+        <h1  className='font-bold md:text-[22px]'>{title}</h1>
+        <h1 className='font-normal md:text-[20px]'>$ {price}</h1>
+        <p className='font-normal leading-[35px] tracking-wide text-gray-500 md:text-[22px]'>{description}</p>
         <div className="flex items-center">
       {  Array(Math.round(rating? rating?.rate:1 )).fill().map(Math.random).map((e)=>{
         console.log(e)
